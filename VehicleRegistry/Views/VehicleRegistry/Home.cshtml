@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<style type="text/css">
+    #button {
+        border: 3px solid black;
+        padding: 5px;
+        text-align: center;
+        width: 300px;
+        margin: 3px auto;
+    }
+
+    #div {
+        text-align: center
+    }
+</style>
+
+<div class="jumbotron">
+    <h1 style="text-align:center">Vehicle Registry Home</h1>
+    <p style="text-align:center">@ViewBag.Message</p>
+</div>
+
+<div id="div" class="row">
+    <div>
+        <button id="button" type="button" onclick="location.href='@Url.Action("CreateVehicleView", "VehicleRegistry")'">Register New Vehicle</button>
+    </div>
+    <div>
+        <button id="button" type="button" onclick="location.href='@Url.Action("GetVehicleList", "VehicleRegistry")'">Get List Of All Vehicles</button>
+    </div>
+    <div>
+        <button id="button" type="button" onclick="location.href='@Url.Action("GetVehicle", "VehicleRegistry")'">Get vehicle By Registration Number</button>
+    </div>
+    <div>
+        <button id="button" type="button" onclick="location.href='@Url.Action("RemoveVehicle", "VehicleRegistry")'">Remove Vehicle</button>
+    </div>
+    <div>
+        <button id="button" type="button" onclick="location.href='@Url.Action("UpdateVehicle", "VehicleRegistry")'">Update Vehicle</button>
+    </div>
+    <div>
+        <button id="button" type="button" onclick="location.href='@Url.Action("ViewService", "VehicleRegistry")'">Book Services for Vehicles</button>
+    </div>
+    <div>
+        <button id="button" type="button" onclick="location.href='@Url.Action("ViewServiceHistory", "VehicleRegistry")'">View Service History</button>
+    </div>
+</div>
